@@ -79,6 +79,9 @@ sudo docker-compose up -d
 * Click `Add a public hostname`
 * Add a subdomain (optional) and select your domain to craft Vaultwarden’s URL.
 * Set the `Type` to be `HTTP` and the URL to be `vaultwarden:80`
+
+![image](https://user-images.githubusercontent.com/58751387/215608263-52fbb225-591d-45d8-9692-c3e2cbf932c1.png)
+
 * Click `Save hostname`.
 Your vaultwarden instance should now be accessible from the internet on that URL. Try it!
 
