@@ -111,13 +111,19 @@ Visit the [Cloudflare Dashboard](https://dash.cloudflare.com), click on your web
 cd /home/<username>/VaultWarden/
 ```
 * Save and close this file.
+* Make `backup.sh` executable so that you or your cronjob can run it.
+```bash
+sudo chmod +x ./backup.sh
+```
+* Run `./backup.sh` to verify that it is working and that there is a new `.tar` file in the `Backups` folder.
+* Take note of the full file path of `backup.sh`, because you'll need to enter it into the crontab file.
 * Run the following to view your scheduled jobs
 ```bash
 sudo crontab -e
 ```
-* Add the following to the bottom of the open crontab file. **Be sure to edit the file path this is using so it can find the right backup.sh file!** Verify that the command works by running the command yourself with `sudo` permissions. Once you know the command works, then put it into this file.
+* Add the following to the bottom of the open crontab file. **NOTE: Be sure to edit the file path this is using so it can find the right backup.sh file!** In a seperate terminal, verify that this full command works before saving.
 ```bash
 0 0 * * * /home/<username>/VaultWarden/backup.sh
 ```
 * Save and exit this file. 
-Your backups should now be running weekly. This will run the `backup.sh` file every night at midnight.  
+Your backups should now be running weekly. This will run the `backup.sh` file every night at midnight. 
