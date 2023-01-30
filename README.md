@@ -1,4 +1,5 @@
-# Docker-Compose Stack for Vaultwarden via a Cloudflare tunnel
+# Docker-Compose Stack for Vaultwarden via a Cloudflare tunnel 
+### (On Linux or Mac)
 
 ![image](https://user-images.githubusercontent.com/58751387/215606494-8c5d30fe-10d9-4ec1-8061-6d1522b2dc74.png)
 
