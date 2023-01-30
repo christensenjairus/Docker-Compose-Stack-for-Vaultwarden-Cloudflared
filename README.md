@@ -78,7 +78,7 @@ sudo docker-compose up -d
 
 ![image](https://user-images.githubusercontent.com/58751387/215606983-c6e43555-352a-4af4-92b5-d50b89877777.png)
 
-* Go back to the Tunnel configuration page and click `Public Hostname` at the top.  
+* Click `Next` or go back to the Tunnel configuration page and click `Public Hostname` at the top.  
 
 ![image](https://user-images.githubusercontent.com/58751387/215607025-54919f47-3789-4b3d-9646-7fb70c3ba226.png)
 
