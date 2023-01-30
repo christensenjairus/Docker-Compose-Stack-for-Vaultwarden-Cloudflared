@@ -7,7 +7,7 @@ services:
     #environment:
     #  - WEBSOCKET_ENABLED=true
     #  - SIGNUPS_ALLOWED=false
-    #  - DOMAIN=bitwarden.christencloud.us
+    #  - DOMAIN=bitwarden.example.com
     #  - SMTP_HOST=<smtp_host>
     #  - SMTP_FROM=<sender_address>
     #  - SMTP_PORT=587
