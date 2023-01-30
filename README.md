@@ -16,6 +16,13 @@ This is out of scope of this documentation, however obtaining a cloudflare domai
 
 Following this README, you can run Vaultwarden on the root of this new domain or on a subdomain of your choice and have it be reachable to the outside world.
 
+### Clone this repository
+The following command will create a folder in your home folder titled `VaultWarden`. This will contain the files from this repository and hopefully soon contain Vaultwarden's data. 
+*Note: Make sure to have `git` installed first.*
+```bash
+git clone https://github.com/christensenjairus/Docker-Compose-Stack-for-Vaultwarden-Cloudflared.git ~/VaultWarden && cd ~/VaultWarden
+```
+
 ### Obtain a tunnel token
 * Visit [Cloudflare’s Zerotrust Dashboard](https://dash.teams.cloudflare.com) and navigate via the left sidebar to `Access` > `Tunnels`. This page should look like this.
 
