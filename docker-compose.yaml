@@ -16,14 +16,19 @@ services:
     #  - SMTP_PASSWORD=<sender_password>
     #  - ADMIN_TOKEN=<admin token>
     volumes:
-      - ./vw-data:/data #ports:
-      #  - 80:80
+      - ./vw-data:/data 
+    
+    # The following port configuration doesn't need to be uncommented and exposed if tunnel is working. 
+    # When commented out, it'll be exposed on port 80 to cloudflared, but not to the outside world. 
+    # Uncomment this to expose it via HTTP.
+    #ports:    
+    #  - 80:80
 
   cloudflared:
     image: cloudflare/cloudflared:latest
     container_name: VaultWarden_CloudFlare
     restart: always
-    command: "tunnel --no-autoupdate run --token <token here!>"
+    command: "tunnel --no-autoupdate run --token <token here>"
     # the token is created with ZeroTrust > Tunnels and specific to this subdomain
     volumes:
       - ./cloudflared:/etc/cloudflared
