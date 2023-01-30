@@ -1,0 +1,31 @@
+version: '3'
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: VaultWarden
+    restart: always
+    #environment:
+    #  - WEBSOCKET_ENABLED=true
+    #  - SIGNUPS_ALLOWED=false
+    #  - DOMAIN=bitwarden.christencloud.us
+    #  - SMTP_HOST=<smtp_host>
+    #  - SMTP_FROM=<sender_address>
+    #  - SMTP_PORT=587
+    #  - SMTP_SSL=true
+    #  - SMTP_USERNAME=<sender_username>
+    #  - SMTP_PASSWORD=<sender_password>
+    #  - ADMIN_TOKEN=<admin token>
+    volumes:
+      - ./vw-data:/data #ports:
+      #  - 80:80
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: VaultWarden_CloudFlare
+    restart: always
+    command: "tunnel --no-autoupdate run --token <token here!>"
+    # the token is created with ZeroTrust > Tunnels and specific to this subdomain
+    volumes:
+      - ./cloudflared:/etc/cloudflared
+    depends_on:
+      - vaultwarden
