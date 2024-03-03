@@ -5,9 +5,9 @@ services:
     container_name: VaultWarden
     restart: always
     #environment:
-    #  - WEBSOCKET_ENABLED=true
+    #  - WEBSOCKET_ENABLED=false  # WebSockets will not work with this type of tunnel. If you have a solution, pull requests are welcome!
     #  - SIGNUPS_ALLOWED=false
-    #  - DOMAIN=bitwarden.example.com
+    #  - DOMAIN=https://bitwarden.example.com
     #  - SMTP_HOST=<smtp_host>
     #  - SMTP_FROM=<sender_address>
     #  - SMTP_PORT=587
